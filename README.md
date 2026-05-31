@@ -259,6 +259,34 @@ These are not stimulus-locked-encoder-first, but their task-fMRI sub-protocols a
 | [**CHIMGEN (China)**](https://www.nature.com/articles/s41380-019-0627-6) | 7000+ Chinese with multi-modal MRI; mostly rsfMRI but some task | Consortium agreement |
 | [**SRPBS Multi-disorder (Japan)**](https://bicr-resource.atr.jp/srpbsopen/) | 993 patients + 1421 HC across 12 sites; T1 + rsfMRI + task subsets | ATR application |
 
+### Global coverage — regional cohorts (beyond US / Western Europe / East Asia)
+
+The catalog leans US-centric. These are regional initiatives that hold or are building stimulus-relevant cohorts:
+
+| Region | Holder | What | Access |
+|---|---|---|---|
+| 🇧🇷 🇦🇷 🇨🇱 🇨🇴 🇲🇽 | [**BrainLat (Latin America)**](https://www.nature.com/articles/s41597-023-02806-8) | 780 participants × 5 countries; MRI + rsfMRI + DWI + hd-EEG; 530 patients (AD, bvFTD, MS, PD) + 250 HC | **Open** (Sci Data 2023) |
+| 🇦🇷 🇨🇱 🇨🇴 🇧🇷 🇲🇽 🇵🇪 | [**ReDLat (dementia)**](https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2021.631722/full) | LatAm dementia consortium | Application |
+| 🇳🇬 | [**Nigerian Clinical-MRI (Ogbole et al. 2025)**](https://www.nature.com/articles/s41597-025-04743-0) | 88 subjects: HC + dementia + PD | **Open** |
+| 🇿🇦 | [**Rural South Africa portable MRI (DPHRU + Hyperfine)**](https://www.newswise.com/articles/low-field-portable-mri-enables-new-insights-into-brain-ageing-in-rural-south-africa) | Brain aging on low-field portable | Restricted |
+| 🌍 | [**H3Africa**](https://h3africa.org/) | Pan-African genomics + clinical; imaging growing | Application |
+| 🇳🇿 | [**Dunedin Study**](https://dunedinstudy.otago.ac.nz/) | 1000+ birth cohort (1972–73), MRI added ~2021 at age ~45; basis for [**DunedinPACNI**](https://dunedinstudy.otago.ac.nz/files/1753058611779.pdf) pace-of-aging biomarker | Application via Otago |
+| 🇦🇺 | [**AIBL (Aus. Imaging, Biomarkers & Lifestyle)**](https://aibl.csiro.au/) | 3000+ × 15 years longitudinal MRI + PET; AD-focused | Application |
+| 🇮🇷 | [**Iranian Brain Imaging Database (IBID), NBML Tehran**](https://pmc.ncbi.nlm.nih.gov/articles/PMC8114860/) | 300 healthy, balanced 20–70 yr, multimodal; ENIGMA member | Application |
+| 🇮🇳 | [**NIMHANS Bangalore aging cohort**](https://www.biorxiv.org/content/10.1101/2024.02.04.578829.full.pdf) | 301 CN/MCI/AD Indian | Restricted, published-derived |
+| 🇮🇳 | [**GenomeIndia**](https://genomeindia.cdac.in/) | 10k+ Indian genomes, imaging planned | Application |
+| 🇸🇬 | [**SG10K (Singapore)**](https://www.npm.sg/) | 10k → 100k multi-ethnic | Application |
+| 🇸🇬 | [**EDIS / GUSTO (Singapore)**](https://www.duke-nus.edu.sg/research/EDIS/) | Elderly and pediatric Singaporean longitudinal | Restricted |
+| 🇳🇱 | [**Rotterdam Study**](https://www.epib.nl/research/ergo.htm) | 17k+ longitudinal Dutch with imaging | Application |
+| 🇳🇱 | [**Lifelines**](https://www.lifelines.nl/) | 167k three-generation, imaging substudy | Application |
+| 🇳🇴 | [**HUNT**](https://www.ntnu.edu/hunt) | 240k Norwegian, imaging arm growing | Application |
+| 🇪🇪 | [**Estonian Biobank**](https://genomics.ut.ee/en/content/estonian-biobank) | 200k, imaging subset | Application |
+| 🇫🇮 | [**FinnGen**](https://www.finngen.fi/en) | 500k Finnish genome + EHR; imaging via THL | Application |
+| 🇨🇦 | [**CARTaGENE (Quebec)**](https://www.cartagene.qc.ca/en) | 43k with imaging subset | Application |
+| 🇫🇷 | [**MRi-Share (Bordeaux)**](https://www.biorxiv.org/content/10.1101/2020.06.17.154666.full.pdf) | 1870 university students, multimodal MRI | [BIL&GIN](https://www.gin.cnrs.fr/) |
+
+Most of these are not stimulus-locked-task-fMRI-first, but they're the realistic OOD test pools for any encoder claiming generalization beyond NSD/COCO-trained Western subjects. The Nigerian dataset and BrainLat are the rare ones that are openly available **now**.
+
 ### How to read this list
 
 - **Need it soon** → already-open datasets in §1–§12 above. Don't wait for the restricted set.
