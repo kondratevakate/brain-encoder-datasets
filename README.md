@@ -284,6 +284,8 @@ The catalog leans US-centric. These are regional initiatives that hold or are bu
 | 🇫🇮 | [**FinnGen**](https://www.finngen.fi/en) | 500k Finnish genome + EHR; imaging via THL | Application |
 | 🇨🇦 | [**CARTaGENE (Quebec)**](https://www.cartagene.qc.ca/en) | 43k with imaging subset | Application |
 | 🇫🇷 | [**MRi-Share (Bordeaux)**](https://www.biorxiv.org/content/10.1101/2020.06.17.154666.full.pdf) | 1870 university students, multimodal MRI | [BIL&GIN](https://www.gin.cnrs.fr/) |
+| 🇨🇿 | [**Czech Brain Aging Study (CBAS)**](http://www.cbas.cz/) | Longitudinal Prague atrophy + WM + diffusivity; rsfMRI subset | Charles Uni / Motol |
+| 🇵🇱 | [**PolSenior 2**](https://pubmed.ncbi.nlm.nih.gov/21979452/) | 5695 Polish elderly with MRI substudy | Application |
 
 Most of these are not stimulus-locked-task-fMRI-first, but they're the realistic OOD test pools for any encoder claiming generalization beyond NSD/COCO-trained Western subjects. The Nigerian dataset and BrainLat are the rare ones that are openly available **now**.
 
