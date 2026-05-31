@@ -220,6 +220,87 @@ Don't underestimate clinical data — heterogeneity is exactly the OOD test set 
 
 ---
 
+## 13. EEG / MEG / fNIRS paired with MRI
+
+These datasets record brain responses to stimuli with non-MRI modalities, but always include a structural T1 (and often functional MRI) on the same subjects. Useful for:
+- Training cross-modal encoders that generalise BOLD predictions to EEG/MEG signals
+- MEG/EEG source reconstruction (requires T1-derived head model — the MRI branch of the pipeline is the same as for any other encoder)
+- fNIRS cortical mapping with atlas registration to T1
+
+Sort: chronological, newest first.
+
+### EEG + MRI
+
+| Year | Dataset | N | Stimuli / task | Modalities | T1? | Access |
+|---|---|---|---|---|---|---|
+| 2025 | [Inner speech EEG-fMRI](https://www.sciencedirect.com/article/pii/S2352340925009795) | 3 | Inner word repetition | Simultaneous EEG + fMRI + **T1w** | Yes | OpenNeuro |
+| 2023 | [**NATVIEW EEG-fMRI** (NKI)](https://www.nature.com/articles/s41597-023-02458-8) | 22 | Movies + checkerboard + breath-hold | Simultaneous EEG + fMRI + **T1 MPRAGE** | Yes | Open |
+| 2023 | [THINGS-EEG2](https://www.nature.com/articles/s41597-023-02068-4) | 50 | 22k images (THINGS concept set) | EEG only — **no paired MRI on same subjects** but pairs with [THINGS-fMRI](https://openneuro.org/datasets/ds004192) | No (same stimuli) | OpenNeuro |
+| 2020 | [**EEG-fMRI Motor Imagery NF** (ds002338)](https://openneuro.org/datasets/ds002338) | 30 | Motor imagery NF, 5 sessions | Simultaneous EEG + fMRI + **MPRAGE 1mm iso** | Yes | OpenNeuro |
+| — | [Simultaneous independent EEG-MRI](https://pmc.ncbi.nlm.nih.gov/articles/PMC10585622/) | 20 | Resting | EEG + MRI (separate runs, same session) + **SPGR 1mm iso** | Yes | Open |
+
+**Note on THINGS-EEG2:** the same 22k-image stimulus set is shared with THINGS-fMRI and THINGS-MEG1, making it uniquely suited for cross-modal encoding model comparison even though MRI and EEG were not recorded simultaneously.
+
+### MEG + MRI
+
+| Year | Dataset | N | Stimuli / task | Modalities | T1? | Access |
+|---|---|---|---|---|---|---|
+| 2022 | [**studyforrest MEG**](https://pmc.ncbi.nlm.nih.gov/articles/PMC9106652/) | 15 | Forrest Gump AV movie | MEG + same 7T T1/T2 as studyforrest | Yes (7T) | OpenNeuro |
+| 2018 | [**HCP MEG release**](https://www.humanconnectome.org/study/hcp-young-adult/document/meg-data-documentation) | 95 | Resting + task (motor/language/working memory) | MEG + full HCP T1/T2/myelin | Yes | Application |
+| 2017 | [**THINGS-MEG1**](https://www.nature.com/articles/s41597-023-01976-4) | 4 | THINGS images (22k) | MEG + **T1w** | Yes | [OSF](https://osf.io/crn32/) |
+| 2015 | [**Wakeman & Henson (ds000117)**](https://openneuro.org/datasets/ds000117) | 16 | Famous/unfamiliar/scrambled faces | MEG + EEG + fMRI + **T1w 1mm** | Yes | **OpenNeuro** |
+
+**Wakeman & Henson** is the gold standard for multi-modal face processing — MEG + EEG + fMRI + T1 on the same 16 subjects viewing the same stimuli.
+
+### fNIRS + MRI
+
+| Year | Dataset | N | Notes | Access |
+|---|---|---|---|---|
+| — | No large public dataset exists | — | **Biggest open gap in this table** — no paired fNIRS + T1 dataset with N>20 is publicly available | — |
+| — | [BIDS-NIRS extension](https://www.nature.com/articles/s41597-024-03534-3) | — | Format standard only, not a dataset | — |
+
+**Gap:** fNIRS is the most portable and low-cost modality, making it the natural complement to low-field MRI in resource-limited settings — but paired fNIRS+T1 public datasets are essentially absent.
+
+### Cross-modal stimulus alignment (THINGS initiative)
+
+The THINGS initiative is the closest thing to a complete cross-modal stack on the same stimulus set:
+
+| Modality | Dataset | N | Access |
+|---|---|---|---|
+| fMRI | [THINGS-fMRI](https://openneuro.org/datasets/ds004192) | 3 (+4 v2) | OpenNeuro |
+| MEG | [THINGS-MEG1](https://osf.io/crn32/) | 4 | OSF |
+| EEG | [THINGS-EEG2](https://openneuro.org/datasets/ds004212) | 50 | OpenNeuro |
+| Behaviour | [THINGS-behaviour](https://osf.io/) | large | OSF |
+
+Same 22k image concepts across all modalities → train an encoder on fMRI, zero-shot predict EEG topography, validate with MEG source localisation.
+
+---
+
+## 14. K-space / raw MRI (no deface by construction)
+
+K-space datasets share raw Fourier-domain scanner data **before reconstruction**. This matters for two reasons:
+
+1. **Defacing tools work on reconstructed images only** — k-space data always contains full facial geometry (head coil captures the entire head during acquisition). Reconstructing via inverse FFT + marching cubes yields an undefaced 3D mesh, exactly what the face-from-MRI pipeline needs.
+2. **Reconstruction quality is a variable** — undersampled k-space + learned reconstruction gives access to a new axis of data augmentation for segmentation robustness.
+
+| Year | Dataset | N | Anatomy | Field | Format | Defaced? | Access |
+|---|---|---|---|---|---|---|---|
+| 2025 | [**Diff5T**](https://doi.org/10.57760/sciencedb.2512294) | — | Brain diffusion | 5T | raw k-space | unknown | Open (ScienceDB) |
+| 2023 | [**M4Raw**](https://zenodo.org/records/7523691) | 183 healthy (18–32yr) | Brain T1/T2/FLAIR | **0.3T** | multi-channel HDF5 | **Explicitly NOT defaced** (partial head coverage) | **Zenodo, open** |
+| 2019 | [**fastMRI Brain**](https://fastmri.med.nyu.edu/) | 6970 | Brain T1/T2/FLAIR | 1.5T + 3T | HDF5 (ISMRMRD) | Deidentified, **no defacing** | DUA (NYU) |
+| 2017 | [**Calgary-Campinas k-space**](https://www.ccdataset.com/download) | 526 | Brain T1 | 1.5T + 3T, 3 vendors | HDF5 + paired NIfTI | Deidentified | **Open, 90 GB** |
+
+**Calgary-Campinas** is the most useful for face-from-MRI work: 526 subjects, multi-vendor/field, raw k-space + paired reconstructed NIfTI. Covers the same vendor sweep as CC-359 but gives access to the raw acquisition.
+
+### Privacy / ethics note on k-space
+
+- K-space anonymization at acquisition time (CHARISMA approach, ISMRM 2020) is **not yet standard practice** — most scanners export full-head k-space
+- fastMRI and Calgary-Campinas are DUA/open respectively, but neither addresses k-space-derived face reconstruction explicitly in their consent language
+- M4Raw handles this correctly: explicit statement in methods + limitation documented (partial head only)
+- **If using k-space for face reconstruction in published work**: document this angle explicitly, following M4Raw's example
+
+---
+
 ## Known gaps (room for new acquisitions)
 
 - **Music dense single-subject** (NSD-for-music) — doesn't exist.

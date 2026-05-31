@@ -2,7 +2,7 @@
 
 | Population ↓ / Stimulus → | image | video | film | tv | music | speech | decision | pain | motor | interactive | mixed |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| **healthy-adult** | nsd, things-fmri, nod, bold5000, god-kamitani, deep-image-recon, vim-1, haxby-vt, cneuromod-things, algonauts-2023 | bmd, nfed, vim-2, vim-3, algonauts-2021 | studyforrest, nndb, spacetop, natview, cneuromod-movie10, emo-film, neuroemo, hcp-7t-movie, aomic-id1000, algonauts-2025 | cneuromod-friends | studyforrest-music, music-genre-fmri | narratives, lebel-moth, petit-prince, inner-speech-eegfmri | narps | cospine, wager-pain | motor-imagery-nf | cneuromod-games | hcp-task, aomic-piop1, aomic-piop2 |
+| **healthy-adult** | nsd, things-fmri, nod, bold5000, god-kamitani, deep-image-recon, vim-1, haxby-vt, cneuromod-things, algonauts-2023, things-eeg2, things-meg1 | bmd, nfed, vim-2, vim-3, algonauts-2021 | studyforrest, nndb, spacetop, natview, cneuromod-movie10, emo-film, neuroemo, hcp-7t-movie, aomic-id1000, algonauts-2025 | cneuromod-friends | studyforrest-music, music-genre-fmri | narratives, lebel-moth, petit-prince, inner-speech-eegfmri | narps | cospine, wager-pain | motor-imagery-nf, eeg-fmri-nf | cneuromod-games | hcp-task, aomic-piop1, aomic-piop2, wakeman-henson, hcp-meg, cc-kspace, m4raw, fastmri-brain |
 | **healthy-aging** | — | — | — | — | — | — | social-reward | — | — | — | — |
 | **pediatric** | — | — | pixar | — | — | — | — | — | — | — | hbn, abcd |
 | **asd** | — | — | — | — | — | — | — | — | — | — | abide-1, abide-2 |
