@@ -13,7 +13,7 @@ nfed,Natural Facial Expressions Dataset,2024,video,healthy-adult,,1320,multi,,3T
 vim-2,vim-2 (Gallant),2011,video,healthy-adult,3,-,train-long-test-rep,,4T,1.0,n,application,research-only,research-only,https://crcns.org/data-sets/vc/vim-2,,Nishimoto2011-Curr-Biol,Natural movie clips
 vim-3,vim-3,2023,video,healthy-adult,,-,repeated,,7T,,n,application,research-only,research-only,https://crcns.org/data-sets/vc/vim-3,,,7T extension of vim series
 studyforrest,studyforrest,2014,film,healthy-adult,20,-,2-passes-15-subs,~8,7T,2.0,y,openneuro,PDDL,proprietary,https://www.studyforrest.org/,10.18112/openneuro.ds000113.v1.3.0,many,Forrest Gump audio (7T) + AV (3T) + retinotopy + music + localizers
-studyforrest-music,studyforrest music,2014,music,healthy-adult,20,125,8-runs,,7T,2.0,y,openneuro,PDDL,research-only,https://www.studyforrest.org/,,,"25 segments x 5 genres; part of studyforrest"
+studyforrest-music,studyforrest music,2014,music,healthy-adult,20,125,8-runs,,7T,2.0,y,openneuro,PDDL,research-only,https://www.studyforrest.org/,,,25 segments x 5 genres; part of studyforrest
 nndb,Naturalistic Neuroimaging Database 3T+,2024,film,healthy-adult,40,1,full-film,~2,3T,,y,open,CC-BY-4.0,proprietary,https://www.naturalistic-neuroimaging-database.org/,,,Back to the Future + retinotopy/somatotopy/tonotopy
 spacetop,Spacetop,2024,film,healthy-adult,101,-,-,6,3T,,y,open,CC-BY-4.0,mixed,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12373947/,,,2h naturalistic + 4h tasks; includes physiology
 natview,NATVIEW EEG-fMRI,2023,film,healthy-adult,22,-,2-sessions,~2,3T,2.1,y,open,CC-BY-4.0,proprietary,https://www.nature.com/articles/s41597-023-02458-8,10.1038/s41597-023-02458-8,,Simultaneous EEG-fMRI movies + checkerboard + breath-hold
@@ -22,7 +22,7 @@ cneuromod-friends,CNeuroMod Friends,2018,tv,healthy-adult,6,-,1,100+,3T,1.49,y,a
 cneuromod-movie10,CNeuroMod Movie10,2018,film,healthy-adult,6,4,1,10,3T,1.49,y,application,CC-BY-NC,proprietary,https://github.com/courtois-neuromod/cneuromod,,TRIBE;Algonauts2025,Bourne/Hidden Figures/Life/Wolf of Wall Street
 cneuromod-games,CNeuroMod video games,2018,interactive,healthy-adult,6,2,1,many,3T,1.49,y,application,CC-BY-NC,proprietary,https://github.com/courtois-neuromod/cneuromod,,,Super Mario Bros + Shinobi III gameplay
 music-genre-fmri,Music Genre fMRI,2021,music,healthy-adult,5,540,train-test-split,,3T,1.5,y,openneuro,CC0,research-only,https://openneuro.org/datasets/ds003720,,,10 genres x 540 clips x 15s
-narratives,Narratives,2021,speech,healthy-adult,345,27,1-mostly,0.5-2,3T,1.5,y,openneuro,CC0,proprietary,https://openneuro.org/datasets/ds002345,10.1038/s41597-021-01033-3,many,"Aggregates Sherlock, Merlin, Pieman, etc."
+narratives,Narratives,2021,speech,healthy-adult,345,27,1-mostly,0.5-2,3T,1.5,y,openneuro,CC0,proprietary,https://openneuro.org/datasets/ds002345,10.1038/s41597-021-01033-3,many,Aggregates Sherlock, Merlin, Pieman, etc.
 lebel-moth,LeBel Moth Podcasts,2023,speech,healthy-adult,8,27,1,~6,3T,2.0,y,openneuro,CC-BY-4.0,proprietary,https://openneuro.org/datasets/ds003020,10.1038/s41597-023-02437-z,Tang-Huth-decoder,Used in Tang & Huth semantic decoder
 petit-prince,Le Petit Prince multilingual,2022,speech,healthy-adult,150,1,1,~1.5,3T,2.0,y,openneuro,CC-BY-4.0,public-domain,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9424229/,10.1038/s41597-022-01625-7,,EN/CN/FR audiobook; ~50/language
 emo-film,Emo-FilM,2025,film,healthy-adult,30,14,1,~2.5,3T,1.3,y,openneuro,CC-BY-4.0,proprietary,https://openneuro.org/datasets/ds004872,10.1038/s41597-025-04803-5,,14 short emotional films + 50-item annotations + physiology
@@ -48,7 +48,7 @@ cobre-task,COBRE task subset,2014,mixed,scz,150,-,1-pass,,3T,2.0,y,application,c
 fbirn,fBIRN,2013,mixed,scz,200,-,multi-site,,3T,2.0,y,application,custom,N/A,https://www.nitrc.org/projects/fbirn/,,,Sensorimotor + BHT + WM; classic harmonization
 b-snip,B-SNIP,2014,mixed,scz,2400,-,1-pass,,3T,2.0,y,application,NDA,N/A,https://www.b-snip.org/,,,Multi-site psychosis
 embarc,EMBARC,2016,mixed,mdd,309,-,1-pass,,3T,2.0,y,application,NDA,N/A,https://nda.nih.gov/edit_collection.html?id=2199,,,Reward + emotional faces + Stroop in MDD
-ploras,PLORAS,2009,speech,stroke,1000,-,1-pass,,3T,,partial,application,custom,https://www.fil.ion.ucl.ac.uk/ploras/,,,Predicting Language Outcomes after Aphasic Stroke
+ploras,PLORAS,2009,speech,stroke,1000,-,1-pass,,3T,,partial,application,custom,N/A,https://www.fil.ion.ucl.ac.uk/ploras/,,Predicting Language Outcomes after Aphasic Stroke,
 atlas-r2,ATLAS R2.0,2018,mixed,stroke,955,-,1-pass,,3T,,y,open,custom,N/A,http://fcon_1000.projects.nitrc.org/indi/retro/atlas.html,10.1038/s41597-022-01401-7,,Mostly T1+lesion; small task subset
 cospine,CoSpine,2025,pain,healthy-adult,61,-,1-pass,,3T,,y,openneuro,CC-BY-4.0,N/A,https://www.nature.com/articles/s41597-025-05982-x,10.1038/s41597-025-05982-x,,Thermal pain + motor; cortico-spinal coverage
 wager-pain,Wager self-regulation pain,2010,pain,healthy-adult,33,-,1-pass,,3T,2.0,y,open,CC0,N/A,https://openfmri.org/dataset/ds000140/,,,ds000140 self-regulation of heat pain

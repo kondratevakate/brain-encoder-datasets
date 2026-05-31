@@ -248,3 +248,28 @@ If this catalog is useful in your work, please cite the underlying datasets (see
 ## Licence
 
 Catalog metadata is released under [CC0](LICENSE). Individual datasets retain their original licences (see `datasets.csv` → `licence` column).
+
+---
+
+## Pipeline (three-table schema)
+
+The catalog uses a zero-trust three-table schema inspired by the [`healthaiatlas`](https://github.com/kondratevakate/healthaiatlas) data pipeline. Every claim about a dataset must cite a primary source URL.
+
+```
+data/
+  entities.csv   — one row per dataset (id, name, url)
+  claims.csv     — one factual claim per row (entity FK, predicate, value, source URL, confidence)
+  sources.csv    — one URL per row (deduplicated, with liveness status)
+  quarantine.csv — rows rejected during migration (audit only)
+```
+
+`datasets.csv` and `POPULATION_MATRIX.md` are **generated artifacts** — do not hand-edit them.
+
+```bash
+make migrate-apply   # flat datasets.csv → data/ (first time only)
+make validate        # check invariants
+make publish-apply   # data/ → regenerate datasets.csv + POPULATION_MATRIX.md
+make verify-bib      # check datasets.bib against Crossref
+```
+
+See [`INCIDENTS.md`](INCIDENTS.md) for a production log of real failures and the hard rules that came out of them.
