@@ -1,0 +1,33 @@
+name: Catalog integrity
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'datasets.csv'
+      - 'data/**.csv'
+      - 'schema/**.py'
+      - 'pipeline/**.py'
+  pull_request:
+    paths:
+      - 'datasets.csv'
+      - 'data/**.csv'
+      - 'schema/**.py'
+      - 'pipeline/**.py'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate invariants (strict)
+        run: python -m pipeline.validate --strict
+
+      - name: Smoke-test publish (dry-run)
+        run: python -m pipeline.publish
