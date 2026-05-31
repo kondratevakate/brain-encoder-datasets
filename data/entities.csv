@@ -64,6 +64,3 @@ things-eeg2,THINGS-EEG2,https://openneuro.org/datasets/ds004212
 things-meg1,THINGS-MEG1,https://osf.io/crn32/
 hcp-meg,HCP MEG release,https://www.humanconnectome.org/study/hcp-young-adult/document/meg-data-documentation
 eeg-fmri-nf,EEG-fMRI Motor Imagery NF (ds002338),https://openneuro.org/datasets/ds002338
-cc-kspace,Calgary-Campinas k-space,https://www.ccdataset.com/download
-m4raw,M4Raw (0.3T multi-contrast k-space),https://zenodo.org/records/7523691
-fastmri-brain,fastMRI Brain,https://fastmri.med.nyu.edu/
