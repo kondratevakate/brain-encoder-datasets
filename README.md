@@ -220,6 +220,55 @@ Don't underestimate clinical data — heterogeneity is exactly the OOD test set 
 
 ---
 
+## Adjacent holders — restricted but publicly known
+
+Organisations that are publicly confirmed to be building or holding stimulus-locked fMRI data relevant to brain encoders, where the data is not openly accessible (yet). Each entry is annotated with the known **pathway** to access. Useful when "wait for the next OpenNeuro release" is not a realistic plan.
+
+### Active consortia with phased / restricted release
+
+| Holder | What | Pathway |
+|---|---|---|
+| [**CNeuroMod consortium (Courtois)**](https://www.cneuromod.ca/) | sub-01/03/05 are open. Other subjects + new modalities (games, more movies) added in phases | Open subset + collaboration for the rest |
+| [**THINGS Initiative**](https://things-initiative.org/) | Continuing expansion across fMRI, MEG, EEG, behaviour on the same concept set | Open releases + Hebart lab collaboration |
+| [**Algonauts Project**](http://algonauts.csail.mit.edu/) | Each year holds out OOD test set; opens after challenge closes | Wait for next-year release |
+| [**Healthy Brain Network (HBN, Child Mind Institute)**](http://fcon_1000.projects.nitrc.org/indi/cmi_healthy_brain_network/) | 5000+ kids with movies + tasks; rolling release with DUA | DUA application |
+| [**HCP-Lifespan (Aging + Development)**](https://www.humanconnectome.org/) | Continued release of additional subjects + behavioural extensions | HCP application |
+
+### Industry labs building encoders — where the data goes
+
+| Holder | What's known publicly | Pathway |
+|---|---|---|
+| [**Meta FAIR (TRIBE / Brain & AI)**](https://ai.meta.com/research/) | TRIBE v2 model weights public ([HF](https://huggingface.co/facebook/tribev2)); training mix is the published public datasets, but in-house experiments use additional unreleased fMRI/MEG | Industry research / residency |
+| [**MindEye / Princeton, Stanford, MedARC**](https://medarc.ai/fmri/) | NSD-derived encoders; open weights, open code, no proprietary data — but team builds large stimulus-feature caches | Collaboration / hire |
+| [**Apple — CNS group**](https://machinelearning.apple.com/research) | Brain-signal decoding patents and papers; in-house data not disclosed | Industry role |
+| [**DeepMind / Isomorphic Labs**](https://www.isomorphiclabs.com/) | Brain decoding via molecular dynamics + neural data; closed | Industry role |
+| [**Neuralink / Synchron / Paradromics**](https://neuralink.com/) | Invasive BCI not fMRI, but training stimuli + responses paradigm is similar — closed | Industry role |
+| [**Hugo Aerts AIM lab @ MGB**](https://aim.hms.harvard.edu/) | Medical imaging + outcome data at hospital scale, including stimulus paradigms in cancer cohorts | Postdoc / collaboration |
+
+### Population biobanks with task-fMRI subsets (mostly restricted)
+
+These are not stimulus-locked-encoder-first, but their task-fMRI sub-protocols are large and would dramatically expand population coverage:
+
+| Holder | Task component | Pathway |
+|---|---|---|
+| [**UK Biobank Imaging**](https://www.ukbiobank.ac.uk/) | Hariri emotion, working-memory n-back at ~50k subjects | Standard UKB application |
+| [**ABCD Study**](https://nda.nih.gov/abcd) | MID, stop-signal, n-back on 11 800 kids longitudinally | NDA application |
+| [**HCP-EP (Early Psychosis)**](https://www.humanconnectome.org/study/human-connectome-project-for-early-psychosis) | Full HCP task battery in psychosis patients | NDA application |
+| [**Generation R (Rotterdam)**](https://generationr.nl/) | Pediatric task-fMRI across multiple waves | Restricted |
+| [**IMAGEN consortium**](https://imagen-project.org/) | Adolescent task fMRI at 14/16/19/22 yr (faces, MID, stop-signal) | Application |
+| [**CHIMGEN (China)**](https://www.nature.com/articles/s41380-019-0627-6) | 7000+ Chinese with multi-modal MRI; mostly rsfMRI but some task | Consortium agreement |
+| [**SRPBS Multi-disorder (Japan)**](https://bicr-resource.atr.jp/srpbsopen/) | 993 patients + 1421 HC across 12 sites; T1 + rsfMRI + task subsets | ATR application |
+
+### How to read this list
+
+- **Need it soon** → already-open datasets in §1–§12 above. Don't wait for the restricted set.
+- **Multi-year project** → UK Biobank, NAKO, HCP-Lifespan, ABCD — application costs and timelines are real but predictable.
+- **Building a SOTA brain encoder career** → CNeuroMod / THINGS / Algonauts / MedARC are the visible academic paths; FAIR / Apple / DeepMind are the industry paths.
+
+Everything in this section has a public web anchor. No back-channel intel, no personal contacts.
+
+---
+
 ## Known gaps (room for new acquisitions)
 
 - **Music dense single-subject** (NSD-for-music) — doesn't exist.
