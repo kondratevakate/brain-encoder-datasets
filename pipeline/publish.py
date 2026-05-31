@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import io
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -77,11 +78,13 @@ def generate_flat_csv(entity_claims: dict[str, dict]) -> str:
         if not row.get("url"):
             row["url"] = ec.get("url", "")
         rows.append(row)
-    lines = []
-    lines.append(",".join(flat_columns))
+    buf = io.StringIO()
+    writer = csv.DictWriter(buf, fieldnames=flat_columns,
+                            extrasaction="ignore", quoting=csv.QUOTE_MINIMAL)
+    writer.writeheader()
     for row in rows:
-        lines.append(",".join(str(row.get(c, "")) for c in flat_columns))
-    return "\n".join(lines) + "\n"
+        writer.writerow(row)
+    return buf.getvalue()
 
 
 def generate_matrix(entity_claims: dict[str, dict]) -> str:

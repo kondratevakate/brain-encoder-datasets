@@ -370,7 +370,7 @@ narratives__stimulus_licence,narratives,stimulus_licence,proprietary,cc2e38f3,me
 narratives__url,narratives,url,https://openneuro.org/datasets/ds002345,d127308e,medium,2026-05-31
 narratives__doi,narratives,doi,10.1038/s41597-021-01033-3,d127308e,medium,2026-05-31
 narratives__used_in,narratives,used_in,many,d127308e,medium,2026-05-31
-narratives__notes,narratives,notes,Aggregates Sherlock,d127308e,medium,2026-05-31
+narratives__notes,narratives,notes,"Aggregates Sherlock, Merlin, Pieman, etc.",d127308e,medium,2026-05-31
 lebel-moth__year,lebel-moth,year,2023,6cc81a45,medium,2026-05-31
 lebel-moth__stimulus_modality,lebel-moth,stimulus_modality,speech,cc35acde,medium,2026-05-31
 lebel-moth__population,lebel-moth,population,healthy-adult,cc35acde,medium,2026-05-31

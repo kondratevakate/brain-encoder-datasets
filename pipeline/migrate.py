@@ -212,17 +212,26 @@ def migrate(flat_csv: Path, apply: bool, backup: bool) -> dict:
         for e in entities:
             w.writerow({"entity_id": e.entity_id, "name": e.name, "url": e.url})
 
-    # Write sources.csv
-    with (DATA_DIR / "sources.csv").open("w", newline="", encoding="utf-8") as f:
+    # Write sources.csv — merge with existing to preserve verify results
+    existing_sources: dict[str, dict] = {}
+    existing_sources_path = DATA_DIR / "sources.csv"
+    if existing_sources_path.exists():
+        with existing_sources_path.open(newline="", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                existing_sources[row["source_id"]] = row
+
+    with existing_sources_path.open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=SOURCE_COLUMNS)
         w.writeheader()
         for s in source_map.values():
+            existing = existing_sources.get(s.source_id, {})
             w.writerow({
                 "source_id": s.source_id,
                 "url": s.url,
-                "retrieved_at": s.retrieved_at,
-                "wayback_url": s.wayback_url,
-                "status": s.status,
+                # Preserve verified status/dates; default to unverified for new sources
+                "retrieved_at": existing.get("retrieved_at", s.retrieved_at),
+                "wayback_url": existing.get("wayback_url", s.wayback_url),
+                "status": existing.get("status", s.status),
             })
 
     # Write claims.csv
