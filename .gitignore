@@ -1,0 +1,5 @@
+# Pipeline backups
+data/*.bak
+# Untracked verification reports (new ones auto-saved here)
+verification/*.md
+__pycache__/
