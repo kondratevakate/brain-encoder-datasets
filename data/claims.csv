@@ -50,22 +50,22 @@ nod__url,nod,url,https://openneuro.org/datasets/ds004496,a2f1a9c0,medium,2026-05
 nod__doi,nod,doi,10.1038/s41597-023-02471-x,a2f1a9c0,medium,2026-05-31
 nod__notes,nod,notes,ImageNet objects across 30 subjects,a2f1a9c0,medium,2026-05-31
 bold5000__year,bold5000,year,2018,e2696260,medium,2026-05-31
-bold5000__stimulus_modality,bold5000,stimulus_modality,image,d5625929,medium,2026-05-31
-bold5000__population,bold5000,population,healthy-adult,d5625929,medium,2026-05-31
+bold5000__stimulus_modality,bold5000,stimulus_modality,image,076f5dbd,medium,2026-05-31
+bold5000__population,bold5000,population,healthy-adult,076f5dbd,medium,2026-05-31
 bold5000__n_subjects,bold5000,n_subjects,4,e2696260,medium,2026-05-31
 bold5000__n_unique_stimuli,bold5000,n_unique_stimuli,4916,e2696260,medium,2026-05-31
-bold5000__stimulus_repeats,bold5000,stimulus_repeats,15-sessions,d5625929,medium,2026-05-31
+bold5000__stimulus_repeats,bold5000,stimulus_repeats,15-sessions,076f5dbd,medium,2026-05-31
 bold5000__hours_per_subject,bold5000,hours_per_subject,~20,e2696260,medium,2026-05-31
-bold5000__field_strength,bold5000,field_strength,3T,d5625929,medium,2026-05-31
-bold5000__tr_seconds,bold5000,tr_seconds,2.0,d5625929,medium,2026-05-31
-bold5000__bids_compliant,bold5000,bids_compliant,y,d5625929,medium,2026-05-31
+bold5000__field_strength,bold5000,field_strength,3T,076f5dbd,medium,2026-05-31
+bold5000__tr_seconds,bold5000,tr_seconds,2.0,076f5dbd,medium,2026-05-31
+bold5000__bids_compliant,bold5000,bids_compliant,y,076f5dbd,medium,2026-05-31
 bold5000__access,bold5000,access,open,e2696260,medium,2026-05-31
 bold5000__licence,bold5000,licence,CC-BY-4.0,e2696260,medium,2026-05-31
 bold5000__stimulus_licence,bold5000,stimulus_licence,COCO+ImageNet+Scene-mixed,e2696260,medium,2026-05-31
-bold5000__url,bold5000,url,https://bold5000.github.io/,d5625929,medium,2026-05-31
-bold5000__doi,bold5000,doi,10.1038/s41597-019-0052-3,d5625929,medium,2026-05-31
-bold5000__used_in,bold5000,used_in,many,d5625929,medium,2026-05-31
-bold5000__notes,bold5000,notes,Mix of COCO (2000) + ImageNet (1916) + Scene (1000),d5625929,medium,2026-05-31
+bold5000__url,bold5000,url,https://bold5000-dataset.github.io/website/,076f5dbd,medium,2026-05-31
+bold5000__doi,bold5000,doi,10.1038/s41597-019-0052-3,076f5dbd,medium,2026-05-31
+bold5000__used_in,bold5000,used_in,many,076f5dbd,medium,2026-05-31
+bold5000__notes,bold5000,notes,Mix of COCO (2000) + ImageNet (1916) + Scene (1000),076f5dbd,medium,2026-05-31
 god-kamitani__year,god-kamitani,year,2017,4c22234f,medium,2026-05-31
 god-kamitani__stimulus_modality,god-kamitani,stimulus_modality,image,07e54cf1,medium,2026-05-31
 god-kamitani__population,god-kamitani,population,healthy-adult,07e54cf1,medium,2026-05-31
@@ -370,7 +370,7 @@ narratives__stimulus_licence,narratives,stimulus_licence,proprietary,cc2e38f3,me
 narratives__url,narratives,url,https://openneuro.org/datasets/ds002345,d127308e,medium,2026-05-31
 narratives__doi,narratives,doi,10.1038/s41597-021-01033-3,d127308e,medium,2026-05-31
 narratives__used_in,narratives,used_in,many,d127308e,medium,2026-05-31
-narratives__notes,narratives,notes,"Aggregates Sherlock, Merlin, Pieman, etc.",d127308e,medium,2026-05-31
+narratives__notes,narratives,notes,Aggregates Sherlock,d127308e,medium,2026-05-31
 lebel-moth__year,lebel-moth,year,2023,6cc81a45,medium,2026-05-31
 lebel-moth__stimulus_modality,lebel-moth,stimulus_modality,speech,cc35acde,medium,2026-05-31
 lebel-moth__population,lebel-moth,population,healthy-adult,cc35acde,medium,2026-05-31
@@ -473,19 +473,19 @@ inner-speech-eegfmri__stimulus_licence,inner-speech-eegfmri,stimulus_licence,N/A
 inner-speech-eegfmri__url,inner-speech-eegfmri,url,https://www.nature.com/articles/s41597-023-02286-w,79d7936d,medium,2026-05-31
 inner-speech-eegfmri__doi,inner-speech-eegfmri,doi,10.1038/s41597-023-02286-w,79d7936d,medium,2026-05-31
 inner-speech-eegfmri__notes,inner-speech-eegfmri,notes,Inner repetition social/numerical words,79d7936d,medium,2026-05-31
-motor-imagery-nf__year,motor-imagery-nf,year,2019,703c2d4f,medium,2026-05-31
-motor-imagery-nf__stimulus_modality,motor-imagery-nf,stimulus_modality,motor,703c2d4f,medium,2026-05-31
-motor-imagery-nf__population,motor-imagery-nf,population,healthy-adult,703c2d4f,medium,2026-05-31
-motor-imagery-nf__n_subjects,motor-imagery-nf,n_subjects,30,703c2d4f,medium,2026-05-31
-motor-imagery-nf__n_unique_stimuli,motor-imagery-nf,n_unique_stimuli,-,703c2d4f,low,2026-05-31
-motor-imagery-nf__stimulus_repeats,motor-imagery-nf,stimulus_repeats,5-sessions,703c2d4f,medium,2026-05-31
-motor-imagery-nf__field_strength,motor-imagery-nf,field_strength,3T,703c2d4f,medium,2026-05-31
-motor-imagery-nf__bids_compliant,motor-imagery-nf,bids_compliant,y,703c2d4f,medium,2026-05-31
-motor-imagery-nf__access,motor-imagery-nf,access,open,703c2d4f,medium,2026-05-31
-motor-imagery-nf__licence,motor-imagery-nf,licence,CC-BY-4.0,703c2d4f,medium,2026-05-31
-motor-imagery-nf__stimulus_licence,motor-imagery-nf,stimulus_licence,N/A,703c2d4f,medium,2026-05-31
-motor-imagery-nf__url,motor-imagery-nf,url,https://www.biorxiv.org/content/10.1101/862375v1,703c2d4f,medium,2026-05-31
-motor-imagery-nf__notes,motor-imagery-nf,notes,Neurofeedback training 5 sessions,703c2d4f,medium,2026-05-31
+motor-imagery-nf__year,motor-imagery-nf,year,2019,e7d9f229,medium,2026-05-31
+motor-imagery-nf__stimulus_modality,motor-imagery-nf,stimulus_modality,motor,e7d9f229,medium,2026-05-31
+motor-imagery-nf__population,motor-imagery-nf,population,healthy-adult,e7d9f229,medium,2026-05-31
+motor-imagery-nf__n_subjects,motor-imagery-nf,n_subjects,30,e7d9f229,medium,2026-05-31
+motor-imagery-nf__n_unique_stimuli,motor-imagery-nf,n_unique_stimuli,-,e7d9f229,low,2026-05-31
+motor-imagery-nf__stimulus_repeats,motor-imagery-nf,stimulus_repeats,5-sessions,e7d9f229,medium,2026-05-31
+motor-imagery-nf__field_strength,motor-imagery-nf,field_strength,3T,e7d9f229,medium,2026-05-31
+motor-imagery-nf__bids_compliant,motor-imagery-nf,bids_compliant,y,e7d9f229,medium,2026-05-31
+motor-imagery-nf__access,motor-imagery-nf,access,open,e7d9f229,medium,2026-05-31
+motor-imagery-nf__licence,motor-imagery-nf,licence,CC-BY-4.0,e7d9f229,medium,2026-05-31
+motor-imagery-nf__stimulus_licence,motor-imagery-nf,stimulus_licence,N/A,e7d9f229,medium,2026-05-31
+motor-imagery-nf__url,motor-imagery-nf,url,https://web.archive.org/web/20200214144644/https://www.biorxiv.org/content/10.1101/862375v1,e7d9f229,medium,2026-05-31
+motor-imagery-nf__notes,motor-imagery-nf,notes,Neurofeedback training 5 sessions; primary URL dead - Wayback snapshot,e7d9f229,medium,2026-05-31
 hcp-task__year,hcp-task,year,2013,256dfaec,medium,2026-05-31
 hcp-task__stimulus_modality,hcp-task,stimulus_modality,mixed,d5299ef4,medium,2026-05-31
 hcp-task__population,hcp-task,population,healthy-adult,d5299ef4,medium,2026-05-31
@@ -722,20 +722,20 @@ fbirn__licence,fbirn,licence,custom,63c93aa6,medium,2026-05-31
 fbirn__stimulus_licence,fbirn,stimulus_licence,N/A,63c93aa6,medium,2026-05-31
 fbirn__url,fbirn,url,https://www.nitrc.org/projects/fbirn/,63c93aa6,medium,2026-05-31
 fbirn__notes,fbirn,notes,Sensorimotor + BHT + WM; classic harmonization,63c93aa6,medium,2026-05-31
-b-snip__year,b-snip,year,2014,76d51bc1,medium,2026-05-31
-b-snip__stimulus_modality,b-snip,stimulus_modality,mixed,76d51bc1,medium,2026-05-31
-b-snip__population,b-snip,population,scz,76d51bc1,medium,2026-05-31
-b-snip__n_subjects,b-snip,n_subjects,2400,76d51bc1,medium,2026-05-31
-b-snip__n_unique_stimuli,b-snip,n_unique_stimuli,-,76d51bc1,low,2026-05-31
-b-snip__stimulus_repeats,b-snip,stimulus_repeats,1-pass,76d51bc1,medium,2026-05-31
-b-snip__field_strength,b-snip,field_strength,3T,76d51bc1,medium,2026-05-31
-b-snip__tr_seconds,b-snip,tr_seconds,2.0,76d51bc1,medium,2026-05-31
-b-snip__bids_compliant,b-snip,bids_compliant,y,76d51bc1,medium,2026-05-31
-b-snip__access,b-snip,access,application,76d51bc1,medium,2026-05-31
-b-snip__licence,b-snip,licence,NDA,76d51bc1,medium,2026-05-31
-b-snip__stimulus_licence,b-snip,stimulus_licence,N/A,76d51bc1,medium,2026-05-31
-b-snip__url,b-snip,url,https://www.b-snip.org/,76d51bc1,medium,2026-05-31
-b-snip__notes,b-snip,notes,Multi-site psychosis,76d51bc1,medium,2026-05-31
+b-snip__year,b-snip,year,2014,7536aba3,medium,2026-05-31
+b-snip__stimulus_modality,b-snip,stimulus_modality,mixed,7536aba3,medium,2026-05-31
+b-snip__population,b-snip,population,scz,7536aba3,medium,2026-05-31
+b-snip__n_subjects,b-snip,n_subjects,2400,7536aba3,medium,2026-05-31
+b-snip__n_unique_stimuli,b-snip,n_unique_stimuli,-,7536aba3,low,2026-05-31
+b-snip__stimulus_repeats,b-snip,stimulus_repeats,1-pass,7536aba3,medium,2026-05-31
+b-snip__field_strength,b-snip,field_strength,3T,7536aba3,medium,2026-05-31
+b-snip__tr_seconds,b-snip,tr_seconds,2.0,7536aba3,medium,2026-05-31
+b-snip__bids_compliant,b-snip,bids_compliant,y,7536aba3,medium,2026-05-31
+b-snip__access,b-snip,access,application,7536aba3,medium,2026-05-31
+b-snip__licence,b-snip,licence,NDA,7536aba3,medium,2026-05-31
+b-snip__stimulus_licence,b-snip,stimulus_licence,N/A,7536aba3,medium,2026-05-31
+b-snip__url,b-snip,url,https://osf.io/mn2dg/,7536aba3,medium,2026-05-31
+b-snip__notes,b-snip,notes,Multi-site psychosis,7536aba3,medium,2026-05-31
 embarc__year,embarc,year,2016,01eaeef8,medium,2026-05-31
 embarc__stimulus_modality,embarc,stimulus_modality,mixed,01eaeef8,medium,2026-05-31
 embarc__population,embarc,population,mdd,01eaeef8,medium,2026-05-31
@@ -750,19 +750,19 @@ embarc__licence,embarc,licence,NDA,01eaeef8,medium,2026-05-31
 embarc__stimulus_licence,embarc,stimulus_licence,N/A,01eaeef8,medium,2026-05-31
 embarc__url,embarc,url,https://nda.nih.gov/edit_collection.html?id=2199,01eaeef8,medium,2026-05-31
 embarc__notes,embarc,notes,Reward + emotional faces + Stroop in MDD,01eaeef8,medium,2026-05-31
-ploras__year,ploras,year,2009,609c7284,medium,2026-05-31
-ploras__stimulus_modality,ploras,stimulus_modality,speech,609c7284,medium,2026-05-31
-ploras__population,ploras,population,stroke,609c7284,medium,2026-05-31
-ploras__n_subjects,ploras,n_subjects,1000,609c7284,medium,2026-05-31
-ploras__n_unique_stimuli,ploras,n_unique_stimuli,-,609c7284,low,2026-05-31
-ploras__stimulus_repeats,ploras,stimulus_repeats,1-pass,609c7284,medium,2026-05-31
-ploras__field_strength,ploras,field_strength,3T,609c7284,medium,2026-05-31
-ploras__bids_compliant,ploras,bids_compliant,partial,609c7284,medium,2026-05-31
-ploras__access,ploras,access,application,609c7284,medium,2026-05-31
-ploras__licence,ploras,licence,custom,609c7284,medium,2026-05-31
-ploras__stimulus_licence,ploras,stimulus_licence,N/A,609c7284,medium,2026-05-31
-ploras__url,ploras,url,https://www.fil.ion.ucl.ac.uk/ploras/,609c7284,medium,2026-05-31
-ploras__used_in,ploras,used_in,Predicting Language Outcomes after Aphasic Stroke,609c7284,medium,2026-05-31
+ploras__year,ploras,year,2009,87982745,medium,2026-05-31
+ploras__stimulus_modality,ploras,stimulus_modality,speech,87982745,medium,2026-05-31
+ploras__population,ploras,population,stroke,87982745,medium,2026-05-31
+ploras__n_subjects,ploras,n_subjects,1000,87982745,medium,2026-05-31
+ploras__n_unique_stimuli,ploras,n_unique_stimuli,-,87982745,low,2026-05-31
+ploras__stimulus_repeats,ploras,stimulus_repeats,1-pass,87982745,medium,2026-05-31
+ploras__field_strength,ploras,field_strength,3T,87982745,medium,2026-05-31
+ploras__bids_compliant,ploras,bids_compliant,partial,87982745,medium,2026-05-31
+ploras__access,ploras,access,application,87982745,medium,2026-05-31
+ploras__licence,ploras,licence,custom,87982745,medium,2026-05-31
+ploras__stimulus_licence,ploras,stimulus_licence,N/A,87982745,medium,2026-05-31
+ploras__url,ploras,url,https://web.archive.org/web/20220624050049/https://www.fil.ion.ucl.ac.uk/Ploras/,87982745,medium,2026-05-31
+ploras__used_in,ploras,used_in,Predicting Language Outcomes after Aphasic Stroke; primary URL dead - Wayback snapshot,87982745,medium,2026-05-31
 atlas-r2__year,atlas-r2,year,2018,18610822,medium,2026-05-31
 atlas-r2__stimulus_modality,atlas-r2,stimulus_modality,mixed,d6aa093e,medium,2026-05-31
 atlas-r2__population,atlas-r2,population,stroke,d6aa093e,medium,2026-05-31

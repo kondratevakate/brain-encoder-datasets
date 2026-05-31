@@ -2,7 +2,7 @@ entity_id,name,url
 nsd,Natural Scenes Dataset,https://naturalscenesdataset.org/
 things-fmri,THINGS-fMRI,https://openneuro.org/datasets/ds004192
 nod,Natural Object Dataset,https://openneuro.org/datasets/ds004496
-bold5000,BOLD5000,https://bold5000.github.io/
+bold5000,BOLD5000,https://bold5000-dataset.github.io/website/
 god-kamitani,Generic Object Decoding (Horikawa-Kamitani),https://openneuro.org/datasets/ds001246
 deep-image-recon,Deep Image Reconstruction (Shen-Kamitani),https://openneuro.org/datasets/ds001506
 vim-1,vim-1 (Kay-Gallant),https://crcns.org/data-sets/vc/vim-1
@@ -30,7 +30,7 @@ neuroemo,NeuroEmo,https://openneuro.org/datasets/ds005700
 narps,NARPS mixed gambles,https://openneuro.org/datasets/ds001734
 social-reward,Social Reward Young+Older,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10834522/
 inner-speech-eegfmri,Bimodal EEG-fMRI Inner Speech,https://www.nature.com/articles/s41597-023-02286-w
-motor-imagery-nf,Simultaneous MRI-EEG Motor Imagery NF,https://www.biorxiv.org/content/10.1101/862375v1
+motor-imagery-nf,Simultaneous MRI-EEG Motor Imagery NF,https://web.archive.org/web/20200214144644/https://www.biorxiv.org/content/10.1101/862375v1
 hcp-task,HCP Task fMRI (WU-Minn YA),https://www.humanconnectome.org/study/hcp-young-adult
 hcp-7t-movie,HCP 7T movie-watching,https://www.humanconnectome.org/study/hcp-young-adult
 hcp-ep,HCP-Early Psychosis,https://www.humanconnectome.org/study/human-connectome-project-for-early-psychosis
@@ -46,9 +46,9 @@ pixar,Pixar Partly Cloudy,https://openneuro.org/datasets/ds000228
 abcd,ABCD task fMRI,https://nda.nih.gov/abcd
 cobre-task,COBRE task subset,https://coins.trendscenter.org/
 fbirn,fBIRN,https://www.nitrc.org/projects/fbirn/
-b-snip,B-SNIP,https://www.b-snip.org/
+b-snip,B-SNIP,https://osf.io/mn2dg/
 embarc,EMBARC,https://nda.nih.gov/edit_collection.html?id=2199
-ploras,PLORAS,https://www.fil.ion.ucl.ac.uk/ploras/
+ploras,PLORAS,https://web.archive.org/web/20220624050049/https://www.fil.ion.ucl.ac.uk/Ploras/
 atlas-r2,ATLAS R2.0,http://fcon_1000.projects.nitrc.org/indi/retro/atlas.html
 cospine,CoSpine,https://www.nature.com/articles/s41597-025-05982-x
 wager-pain,Wager self-regulation pain,https://openfmri.org/dataset/ds000140/

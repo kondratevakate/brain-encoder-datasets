@@ -30,6 +30,15 @@ publish:
 publish-apply:
 	$(PYTHON) -m pipeline.publish --apply
 
+verify-urls:
+	$(PYTHON) -m pipeline.verify
+
+verify-urls-apply:
+	$(PYTHON) -m pipeline.verify --apply
+
+verify-urls-stale:
+	$(PYTHON) -m pipeline.verify --older-than 90 --apply
+
 verify-bib:
 	$(PYTHON) "$(shell python -c "import os; print(os.path.expanduser('~/.claude/skills/bib-verify/scripts/verify_bib.py'))")" \
 		datasets.bib --out "verification/$$(date +%Y-%m-%d)_bib_check.md" --fix
