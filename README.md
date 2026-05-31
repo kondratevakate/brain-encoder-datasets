@@ -185,6 +185,9 @@ Don't underestimate clinical data — heterogeneity is exactly the OOD test set 
 | Dataset | N | Diagnoses | Tasks | Access |
 |---|---|---|---|---|
 | [UCLA CNP / LA5c](https://openfmri.org/dataset/ds000030/) | 272 | HC + SCZ + BD + ADHD | 8 task batteries (stop-signal, BART, scap, PAMRet, PAMENC, taskswitch, BHT) | OpenNeuro, BIDS |
+| [**SRPBS Multi-disorder MRI**](https://bicr-resource.atr.jp/srpbsopen/) | **993 patients + 1421 HC** | MDD + SCZ + ASD + OCD across 12 Japanese sites | T1 + rsfMRI + task subsets | ATR application (Tanaka et al., Sci Data 2021) |
+| [**SRPBS Traveling Subject MRI**](https://bicr-resource.atr.jp/srpbsts/) | 9 × 12 scanners | Healthy traveling | T1 + rsfMRI, 143 sessions | ATR application — Asia harmonization backbone |
+| [**Ge 2022 Chinese multi-modal**](https://www.nature.com/articles/s41597-022-01413-3) | 215 healthy Chinese | HC diversity | T1 + rsfMRI + dMRI | Open via paper |
 | [AOMIC PIOP1](https://openneuro.org/datasets/ds002785) | 216 | HC | Emotion matching, faces, stop-signal | OpenNeuro |
 | [AOMIC PIOP2](https://openneuro.org/datasets/ds002790) | 226 | HC | Emotion matching, WM, stop-signal | OpenNeuro |
 | [AOMIC ID1000](https://openneuro.org/datasets/ds003097) | 928 | HC population | Movie-watching | OpenNeuro |
@@ -201,8 +204,9 @@ Don't underestimate clinical data — heterogeneity is exactly the OOD test set 
 | **Pain** | [CoSpine](https://www.nature.com/articles/s41597-025-05982-x), [Wager self-regulation pain ds000140](https://openfmri.org/dataset/ds000140/), [OpenPain](http://www.openpain.org/) |
 | **Addiction** | Stockholm Cocaine cohort, [NCANDA](https://www.niaaa.nih.gov/research/major-initiatives/national-consortium-alcohol-and-neurodevelopment-adolescence), ABCD substance subset |
 | **PTSD / anxiety / OCD** | Trauma trajectories (Sheba), OCD task fMRI subsets on OpenNeuro |
-| **AD / MCI task** | [PREVENT-AD task](https://openpreventad.loris.ca/), DELCODE, ADNI task subset |
-| **Pediatric naturalistic** | [HBN](http://fcon_1000.projects.nitrc.org/indi/cmi_healthy_brain_network/), [PIXAR Partly Cloudy ds000228](https://openneuro.org/datasets/ds000228), ABCD movie subset |
+| **AD / MCI task** | [PREVENT-AD task](https://openpreventad.loris.ca/), DELCODE, ADNI task subset, [**KBASE (Korea, SNU)**](https://dss.niagads.org/cohorts/korean-brain-aging-study-for-the-early-diagnosis-and-prediction-of-ad-kbase/), [**J-ADNI (Japan, NBDC)**](https://humandbs.dbcls.jp/en/hum0043-v1) |
+| **Pediatric naturalistic** | [HBN](http://fcon_1000.projects.nitrc.org/indi/cmi_healthy_brain_network/), [PIXAR Partly Cloudy ds000228](https://openneuro.org/datasets/ds000228), ABCD movie subset, [**devCCNP (China)**](https://www.nature.com/articles/s41597-023-02377-8) |
+| **Population diversity (non-Western)** | [**CHIMGEN (China, 7000+)**](https://www.nature.com/articles/s41380-019-0627-6) — multimodal incl. rsfMRI; mostly out-of-scope for stimulus-locked but useful for HC pretraining |
 
 ---
 
@@ -220,7 +224,90 @@ Don't underestimate clinical data — heterogeneity is exactly the OOD test set 
 
 ---
 
-## 13. EEG / MEG / fNIRS paired with MRI
+## 13. Asian-population coverage (explicit fix for Western bias)
+
+Most fMRI catalogs are heavily Western. Asian neuroimaging consortia are large but often hosted on local repositories (bicr-resource.atr.jp, humandbs.dbcls.jp, National Science Data Bank) rather than OpenNeuro, so they disappear from OpenNeuro-only searches. CoRR aggregates ~⅓ Asian sites (BNU, IPCAS, SWU) without surfacing their origin. "DecNef" is one component of the broader **SRPBS** family (4 datasets, one application form). NOD and CCNP are Chinese but rarely cited with country attribution.
+
+### In-scope for this catalog (stimulus-locked / task)
+
+| Dataset | Country | Where in README |
+|---|---|---|
+| [Natural Object Dataset (NOD)](https://openneuro.org/datasets/ds004496) | 🇨🇳 China (BNU, Beijing) | §1 |
+| [Le Petit Prince multilingual](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9424229/) | 🇨🇳 CN + 🇫🇷 FR + 🇺🇸 EN | §6 |
+| [devCCNP](https://www.nature.com/articles/s41597-023-02377-8) | 🇨🇳 China (BNU + CAS) | §3 |
+| [SRPBS Multi-disorder MRI](https://bicr-resource.atr.jp/srpbsopen/) | 🇯🇵 Japan (ATR + 12 sites) | §11.1 |
+| [SRPBS Traveling Subject MRI](https://bicr-resource.atr.jp/srpbsts/) | 🇯🇵 Japan | §11.1 |
+| [Ge 2022 Chinese multi-modal](https://www.nature.com/articles/s41597-022-01413-3) | 🇨🇳 China | §11.1 |
+| [KBASE](https://dss.niagads.org/cohorts/korean-brain-aging-study-for-the-early-diagnosis-and-prediction-of-ad-kbase/) | 🇰🇷 Korea (SNU) | §11.2 |
+| [J-ADNI](https://humandbs.dbcls.jp/en/hum0043-v1) | 🇯🇵 Japan (NBDC) | §11.2 |
+| [NeuroEmo](https://openneuro.org/datasets/ds005700) | 🇮🇳 India | §7 |
+
+### Adjacent — out of scope here (rsfMRI / test-retest / structural) but flagged for HC pretraining
+
+| Dataset | Country | N | Why not in main tables |
+|---|---|---|---|
+| [CHIMGEN](https://www.nature.com/articles/s41380-019-0627-6) | 🇨🇳 China | 7000+ | T1 + DTI + rsfMRI; no native stimulus-locked task |
+| [CCNP matCCNP / ageCCNP](https://pmc.ncbi.nlm.nih.gov/articles/PMC8517840/) | 🇨🇳 China | 1040 | Adult / aging, rsfMRI primarily |
+| [SLIM](http://fcon_1000.projects.nitrc.org/indi/retro/southwestuni_qiu_index.html) | 🇨🇳 China (Chongqing) | ~600 × 3 waves | T1 + rsfMRI; great retest, no stimulus |
+| [BNU 1/2/3 + IPCAS 1–8](https://fcon_1000.projects.nitrc.org/indi/CoRR/html/samples.html) | 🇨🇳 China | aggregated in CoRR | Test-retest only |
+| [Korean Brain Aging 1000+](https://www.frontiersin.org/journals/aging-neuroscience/articles/10.3389/fnagi.2020.00233/full) | 🇰🇷 Korea | 1000+ elderly | T1 + cognition, aging study |
+
+---
+
+## 14. Adjacent holders — restricted but publicly known
+
+Organisations publicly confirmed to be building or holding stimulus-locked fMRI data relevant to brain encoders, where the data is not openly accessible (yet). Each entry annotates the known access pathway.
+
+### Active consortia with phased / restricted release
+
+| Holder | What | Pathway |
+|---|---|---|
+| [**CNeuroMod consortium**](https://www.cneuromod.ca/) | sub-01/03/05 open; other subjects + new modalities phased | Open subset + collaboration |
+| [**THINGS Initiative**](https://things-initiative.org/) | Continuing expansion: fMRI, MEG, EEG, behaviour on same concept set | Open releases + Hebart lab |
+| [**Algonauts Project**](http://algonauts.csail.mit.edu/) | Each year holds out OOD test set; opens after challenge closes | Wait for next-year release |
+| [**HBN (Child Mind Institute)**](http://fcon_1000.projects.nitrc.org/indi/cmi_healthy_brain_network/) | 5000+ kids with movies + tasks; rolling release with DUA | DUA application |
+| [**HCP-Lifespan**](https://www.humanconnectome.org/) | Additional subjects + behavioural extensions | HCP application |
+
+### Industry labs building encoders
+
+| Holder | What's known publicly | Pathway |
+|---|---|---|
+| [**Meta FAIR (TRIBE)**](https://ai.meta.com/research/) | TRIBE v2 weights public ([HF](https://huggingface.co/facebook/tribev2)); in-house additional fMRI/MEG not released | Industry research / residency |
+| [**MindEye / MedARC**](https://medarc.ai/fmri/) | NSD-derived encoders; open weights + code | Collaboration / hire |
+| [**Apple CNS group**](https://machinelearning.apple.com/research) | Brain-signal decoding patents; in-house data closed | Industry role |
+| [**DeepMind / Isomorphic**](https://www.isomorphiclabs.com/) | Brain decoding + molecular dynamics; closed | Industry role |
+| [**AIM lab @ MGB**](https://aim.hms.harvard.edu/) | Hospital-scale imaging + outcome data incl. stimulus paradigms | Postdoc / collaboration |
+
+### Population biobanks with task-fMRI subsets (restricted)
+
+| Holder | Task component | Pathway |
+|---|---|---|
+| [**UK Biobank Imaging**](https://www.ukbiobank.ac.uk/) | Hariri emotion, n-back WM at ~50k subjects | Standard UKB application |
+| [**ABCD Study**](https://nda.nih.gov/abcd) | MID, stop-signal, n-back on 11 800 kids longitudinally | NDA application |
+| [**HCP-EP**](https://www.humanconnectome.org/study/human-connectome-project-for-early-psychosis) | Full HCP task battery in early psychosis | NDA application |
+| [**IMAGEN**](https://imagen-project.org/) | Adolescent task fMRI at 14/16/19/22 yr | Application |
+| [**SRPBS Multi-disorder**](https://bicr-resource.atr.jp/srpbsopen/) | 993 patients + 1421 HC across 12 Japan sites | ATR application |
+
+### Global coverage — regional cohorts not in §1–§12
+
+| Region | Holder | What | Access |
+|---|---|---|---|
+| 🇧🇷🇨🇱🇨🇴🇲🇽🇦🇷 | [**BrainLat**](https://www.nature.com/articles/s41597-023-02806-8) | 780 × 5 countries; MRI+rsfMRI+DWI+hd-EEG; 530 neuro patients + 250 HC | **Open** (Sci Data 2023) |
+| 🇳🇬 | [**Nigerian Clinical-MRI**](https://www.nature.com/articles/s41597-025-04743-0) | 88 subjects: HC + dementia + PD | **Open** |
+| 🇳🇿 | [**Dunedin Study + DunedinPACNI**](https://dunedinstudy.otago.ac.nz/) | 1000+ birth cohort, MRI at age 45, pace-of-aging biomarker | Application via Otago |
+| 🇦🇺 | [**AIBL**](https://aibl.csiro.au/) | 3000+ × 15yr longitudinal MRI+PET; AD | Application |
+| 🇮🇷 | [**IBID (Tehran)**](https://pmc.ncbi.nlm.nih.gov/articles/PMC8114860/) | 300 healthy 20–70 yr, multimodal; ENIGMA member | Application |
+| 🇮🇳 | [**NIMHANS Bangalore**](https://www.biorxiv.org/content/10.1101/2024.02.04.578829.full.pdf) | 301 CN/MCI/AD Indian | Restricted |
+| 🇸🇬 | [**SG10K / EDIS / GUSTO**](https://www.npm.sg/) | Multi-ethnic Singaporean, elderly + pediatric longitudinal | Application |
+| 🇳🇱 | [**Rotterdam Study**](https://www.epib.nl/research/ergo.htm) | 17k+ longitudinal with imaging | Application |
+| 🇨🇿 | [**Czech Brain Aging Study**](http://www.cbas.cz/) | Longitudinal Prague atrophy + WM; rsfMRI subset | Application |
+| 🇵🇱 | [**PolSenior 2**](https://pubmed.ncbi.nlm.nih.gov/21979452/) | 5695 Polish elderly with MRI substudy | Application |
+
+Everything in this section has a public web anchor. No back-channel intel.
+
+---
+
+## 15. EEG / MEG / fNIRS paired with MRI
 
 These datasets record brain responses to stimuli with non-MRI modalities, but always include a structural T1 (and often functional MRI) on the same subjects. Useful for:
 - Training cross-modal encoders that generalise BOLD predictions to EEG/MEG signals
@@ -276,7 +363,7 @@ Same 22k image concepts across all modalities → train an encoder on fMRI, zero
 
 ---
 
-## 14. K-space / raw MRI (no deface by construction)
+## 16. K-space / raw MRI (no deface by construction)
 
 K-space datasets share raw Fourier-domain scanner data **before reconstruction**. This matters for two reasons:
 
