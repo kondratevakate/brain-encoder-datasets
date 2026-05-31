@@ -6,15 +6,16 @@ Cell contents are short dataset IDs from [`datasets.csv`](datasets.csv).
 
 | Population ↓  /  Stimulus → | Static image | Video clip | Long-form film | TV series | Music | Speech / story | Emotion-targeted | Decision / reward | Pain | Motor / speech-prod | Interactive |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| **Healthy adult** | nsd, things-fmri, nod, bold5000, god-kamitani, deep-image-recon, vim-1, haxby-vt, cneuromod-things | bmd, nfed, vim-2, vim-3 | studyforrest, spacetop, nndb, natview, cneuromod-movie10 | cneuromod-friends | music-genre-fmri, studyforrest-music | narratives, lebel-moth, petit-prince | emo-film, neuroemo, nfed | narps, hcp-task | cospine, wager-pain | inner-speech-eegfmri, motor-imagery-nf | cneuromod-games |
+| **Healthy adult** | nsd, things-fmri, nod 🇨🇳, bold5000, god-kamitani, deep-image-recon, vim-1, haxby-vt, cneuromod-things, ge-chinese 🇨🇳 | bmd, nfed, vim-2, vim-3 | studyforrest, spacetop, nndb, natview, cneuromod-movie10 | cneuromod-friends | music-genre-fmri, studyforrest-music | narratives, lebel-moth, petit-prince 🇨🇳🇫🇷🇺🇸 | emo-film, neuroemo 🇮🇳, nfed | narps, hcp-task, srpbs-traveling 🇯🇵 | cospine, wager-pain | inner-speech-eegfmri, motor-imagery-nf | cneuromod-games |
 | **Healthy aging** | — | — | spacetop (subset) | — | — | narratives (subset) | — | social-reward | — | — | — |
-| **Pediatric typical** | — | — | aomic-id1000, pixar | — | — | — | — | abcd | — | — | — |
+| **Pediatric typical** | — | — | aomic-id1000, pixar, devccnp 🇨🇳 | — | — | — | — | abcd | — | — | — |
 | **Pediatric clinical (HBN umbrella)** | — | — | hbn (Despicable Me, The Present) | — | — | — | — | hbn (MID) | — | — | — |
 | **ASD** | — | — | hbn, abide-1/2 (site-dep) | — | — | narratives (subset) | — | — | — | — | — |
 | **ADHD** | — | — | hbn | — | — | — | — | ucla-cnp, kessler-inhibition, adhd-200 | — | — | — |
-| **Schizophrenia / psychosis** | — | — | hcp-ep | — | — | — | — | ucla-cnp, cobre-task, fbirn, b-snip, hcp-ep | — | — | — |
+| **Schizophrenia / psychosis** | — | — | hcp-ep | — | — | — | — | ucla-cnp, cobre-task, fbirn, b-snip, hcp-ep, srpbs-multidisorder 🇯🇵 | — | — | — |
 | **Bipolar** | — | — | — | — | — | — | — | ucla-cnp | — | — | — |
-| **Depression (MDD)** | — | — | — | — | — | — | embarc | embarc | — | — | — |
+| **Depression (MDD)** | — | — | — | — | — | — | embarc, srpbs-multidisorder 🇯🇵 | embarc | — | — | — |
+| **AD / MCI** | — | — | — | — | — | — | — | kbase 🇰🇷, j-adni 🇯🇵 | — | — | — |
 | **PTSD / anxiety** | — | — | — | — | — | — | (Sheba trauma, restricted) | — | — | — | — |
 | **Stroke / aphasia** | — | — | — | — | — | ploras, atlas-r2 (subset) | — | — | — | — | — |
 | **Pain (chronic / acute)** | — | — | — | — | — | — | — | — | cospine, wager-pain, openpain.org collection | — | — |

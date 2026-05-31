@@ -100,6 +100,7 @@ Reliability via ISC when there are no per-item repeats. Excellent for naturalist
 | Year | Dataset | N | Film | Hours | Field | Access |
 |---|---|---|---|---|---|---|
 | 2024 | [Spacetop](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12373947/) | 101 | Naturalistic + tasks (6h/subj) | 6 | 3T | Open |
+| 2023 | [**devCCNP (Chinese Color Nest)**](https://www.nature.com/articles/s41597-023-02377-8) | 369 (6–17 yr) | Naturalistic viewing + rsfMRI + multi-modal, **3 waves longitudinal** | varies | 3T | National Science Data Bank — first major Chinese pediatric naturalistic-viewing resource |
 | 2024 | [NNDb-3T+](https://www.naturalistic-neuroimaging-database.org/) | 40 | Back to the Future + retinotopy/somatotopy/tonotopy | full film | 3T | Open |
 | 2023 | [NATVIEW EEG-fMRI](https://www.nature.com/articles/s41597-023-02458-8) | NKI | Movies + checkerboard + breath-hold | 2 sessions | 3T | Open |
 | 2022 | [iEEG-fMRI short film](https://openneuro.org/datasets/ds003688) | 51 iEEG + 30 fMRI | "Pumzi" sci-fi 24-min | 0.4 | 3T | OpenNeuro |
@@ -185,9 +186,12 @@ Don't underestimate clinical data — heterogeneity is exactly the OOD test set 
 | Dataset | N | Diagnoses | Tasks | Access |
 |---|---|---|---|---|
 | [UCLA CNP / LA5c](https://openfmri.org/dataset/ds000030/) | 272 | HC + SCZ + BD + ADHD | 8 task batteries (stop-signal, BART, scap, PAMRet, PAMENC, taskswitch, BHT) | OpenNeuro, BIDS |
+| [**SRPBS Multi-disorder MRI**](https://bicr-resource.atr.jp/srpbsopen/) | **993 patients + 1421 HC** | MDD + SCZ + ASD + OCD across 12 Japanese sites | T1 + rsfMRI + task subsets | ATR application (Tanaka et al., Sci Data 2021) |
+| [**SRPBS Traveling Subject MRI**](https://bicr-resource.atr.jp/srpbsts/) | 9 × 12 scanners | Healthy traveling | T1 + rsfMRI, 143 sessions | ATR application — Asia harmonization backbone |
 | [AOMIC PIOP1](https://openneuro.org/datasets/ds002785) | 216 | HC | Emotion matching, faces, stop-signal | OpenNeuro |
 | [AOMIC PIOP2](https://openneuro.org/datasets/ds002790) | 226 | HC | Emotion matching, WM, stop-signal | OpenNeuro |
 | [AOMIC ID1000](https://openneuro.org/datasets/ds003097) | 928 | HC population | Movie-watching | OpenNeuro |
+| [**Ge 2022 Chinese multi-modal**](https://www.nature.com/articles/s41597-022-01413-3) | 215 healthy Chinese | HC diversity | T1 + rsfMRI + dMRI | Open via paper |
 
 ### 11.2 By disorder
 
@@ -201,8 +205,9 @@ Don't underestimate clinical data — heterogeneity is exactly the OOD test set 
 | **Pain** | [CoSpine](https://www.nature.com/articles/s41597-025-05982-x), [Wager self-regulation pain ds000140](https://openfmri.org/dataset/ds000140/), [OpenPain](http://www.openpain.org/) |
 | **Addiction** | Stockholm Cocaine cohort, [NCANDA](https://www.niaaa.nih.gov/research/major-initiatives/national-consortium-alcohol-and-neurodevelopment-adolescence), ABCD substance subset |
 | **PTSD / anxiety / OCD** | Trauma trajectories (Sheba), OCD task fMRI subsets on OpenNeuro |
-| **AD / MCI task** | [PREVENT-AD task](https://openpreventad.loris.ca/), DELCODE, ADNI task subset |
-| **Pediatric naturalistic** | [HBN](http://fcon_1000.projects.nitrc.org/indi/cmi_healthy_brain_network/), [PIXAR Partly Cloudy ds000228](https://openneuro.org/datasets/ds000228), ABCD movie subset |
+| **AD / MCI task** | [PREVENT-AD task](https://openpreventad.loris.ca/), DELCODE, ADNI task subset, [**KBASE (Korea, SNU)**](https://dss.niagads.org/cohorts/korean-brain-aging-study-for-the-early-diagnosis-and-prediction-of-ad-kbase/), [**J-ADNI (Japan, NBDC)**](https://humandbs.dbcls.jp/en/hum0043-v1) |
+| **Pediatric naturalistic** | [HBN](http://fcon_1000.projects.nitrc.org/indi/cmi_healthy_brain_network/), [PIXAR Partly Cloudy ds000228](https://openneuro.org/datasets/ds000228), ABCD movie subset, [**devCCNP (China)**](https://www.nature.com/articles/s41597-023-02377-8) |
+| **Population diversity (non-Western)** | [**CHIMGEN (China, 7000+)**](https://www.nature.com/articles/s41380-019-0627-6) — multimodal incl. rsfMRI; mostly out-of-scope for stimulus-locked but useful for HC pretraining |
 
 ---
 
@@ -217,6 +222,56 @@ Don't underestimate clinical data — heterogeneity is exactly the OOD test set 
 | — | [Neuroscout](https://neuroscout.org/) | OpenNeuro + automated stimulus-feature extraction |
 | — | [THINGS Initiative](https://things-initiative.org/) | THINGS-fMRI + THINGS-MEG + THINGS-EEG + behaviour |
 | — | [CoRR](http://fcon_1000.projects.nitrc.org/indi/CoRR/html/) | 1629 reliability dataset aggregator |
+
+---
+
+## 13. Asian-population coverage (explicit fix for Western bias)
+
+Most fMRI catalogs — including earlier versions of this one — are heavily Western. That matters because (a) brain-age and encoder generalization fail across populations, (b) Asian neuroimaging consortia are large but often hosted on local repositories rather than OpenNeuro, and (c) several major resources are misattributed (e.g. NOD is BNU, not Western). This section flags what's specifically Asian and why each is or isn't in the main tables above.
+
+### In-scope for this catalog (stimulus-locked / task)
+
+| Dataset | Country | Where in this README |
+|---|---|---|
+| [Natural Object Dataset (NOD)](https://openneuro.org/datasets/ds004496) | 🇨🇳 China (BNU, Beijing) | §1 — Chinese image-encoding workhorse, ~30 subjects ImageNet |
+| [Le Petit Prince multilingual](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9424229/) | 🇨🇳 CN + 🇫🇷 FR + 🇺🇸 EN | §6 — includes Mandarin Chinese subset (~50 subjects) |
+| [devCCNP](https://www.nature.com/articles/s41597-023-02377-8) | 🇨🇳 China (BNU + CAS) | §3 — naturalistic viewing in pediatric Chinese; 3 longitudinal waves |
+| [SRPBS Multi-disorder MRI](https://bicr-resource.atr.jp/srpbsopen/) | 🇯🇵 Japan (ATR + 12 sites) | §11.1 — 993 patients + 1421 HC across MDD/SCZ/ASD/OCD |
+| [SRPBS Traveling Subject MRI](https://bicr-resource.atr.jp/srpbsts/) | 🇯🇵 Japan | §11.1 — Asia's answer to ON-Harmony/DecNef |
+| [Ge 2022 Chinese multi-modal](https://www.nature.com/articles/s41597-022-01413-3) | 🇨🇳 China | §11.1 — 215 healthy Chinese, T1+rsfMRI+dMRI |
+| [KBASE](https://dss.niagads.org/cohorts/korean-brain-aging-study-for-the-early-diagnosis-and-prediction-of-ad-kbase/) | 🇰🇷 Korea (SNU) | §11.2 — Korean ADNI, task fMRI in MCI/AD |
+| [J-ADNI](https://humandbs.dbcls.jp/en/hum0043-v1) | 🇯🇵 Japan (NBDC) | §11.2 — Japanese ADNI mirror |
+| [NeuroEmo](https://openneuro.org/datasets/ds005700) | 🇮🇳 India | §7 — Indian film clips for emotion categories |
+
+### Adjacent — out of scope here, but flagged for use as HC pretraining / test-retest
+
+These are mostly resting-state or pure structural and don't fit the stimulus-locked criterion, but they're the largest Asian cohorts and important pretraining material:
+
+| Dataset | Country | N | Why not in main tables |
+|---|---|---|---|
+| [CHIMGEN](https://www.nature.com/articles/s41380-019-0627-6) | 🇨🇳 China, 33 centers | 7000+ (10k target) | T1 + DTI + rsfMRI primarily; no native task encoder use |
+| [CCNP matCCNP / ageCCNP](https://pmc.ncbi.nlm.nih.gov/articles/PMC8517840/) | 🇨🇳 China | 560 + 480 | Adult / aging waves are mostly rsfMRI |
+| [SLIM (Southwest U Longitudinal)](http://fcon_1000.projects.nitrc.org/indi/retro/southwestuni_qiu_index.html) | 🇨🇳 China (Chongqing) | ~600 students × 3 waves | T1 + rsfMRI; great for retest, no stimulus |
+| [SALD (Southwest U Adult Lifespan)](http://fcon_1000.projects.nitrc.org/indi/retro/sald.html) | 🇨🇳 China (Chongqing) | 494 (19–80 yr) | sMRI + rsfMRI cross-sectional |
+| [HNU / CCBD (Hangzhou Normal U)](https://doi.org/10.6084/m9.figshare.2007483) | 🇨🇳 China | 30 × 10 scans | Densest Chinese T1 test-retest; rsfMRI only |
+| [BNU 1 / 2 / 3 + IPCAS 1–8](https://fcon_1000.projects.nitrc.org/indi/CoRR/html/samples.html) | 🇨🇳 China | aggregated in [CoRR](http://fcon_1000.projects.nitrc.org/indi/CoRR/html/) | Test-retest only; ~⅓ of CoRR is Asian and underacknowledged |
+| [Korean Brain Aging single-scanner 1000+](https://www.frontiersin.org/journals/aging-neuroscience/articles/10.3389/fnagi.2020.00233/full) | 🇰🇷 Korea | 1000+ elderly | Single-scanner T1 + cognition; aging study |
+| [TWBB (Taiwan Biobank imaging arm)](https://www.twbiobank.org.tw/) | 🇹🇼 Taiwan | ~2000 | Population imaging, structural focus |
+
+### Why the gap exists
+
+- Asian datasets often live on **local repositories** (`bicr-resource.atr.jp` for SRPBS, `humandbs.dbcls.jp` for J-ADNI, National Science Data Bank for CCNP) rather than OpenNeuro, so OpenNeuro-only searches miss them entirely.
+- **CoRR aggregator hides per-site origin** — ~⅓ of its 1629 subjects are from Chinese sites (BNU, IPCAS, SWU) but the consortium-level branding obscures this. Always check the per-site documentation, not just the umbrella name.
+- **DecNef / SRPBS terminology confusion**: what's often cited as "DecNef" travelling-subjects is actually one component of the broader SRPBS family. Four datasets share the same application form.
+- **Westerncentric naming bias in landmark datasets**: NOD (Beijing Normal U), CCNP (BNU + CAS), Ge 2022 are sometimes cited without country attribution, contributing to invisibility.
+
+### Population atlas for Asian cohorts
+
+If you train on Asian data, use Asian-derived templates rather than MNI152:
+
+- [**CHN-PD (Chinese Pediatric Atlas)**](https://www.biorxiv.org/content/10.1101/385211.full.pdf) — 328 children at 3T Prisma, BNU
+- [**Chinese 2020 adult atlas**](https://www.nature.com/articles/srep18216) — multi-center, 18–76 yr
+- [**Brainnetome Atlas**](https://atlas.brainnetome.org/) — Chinese parcellation reference
 
 ---
 
