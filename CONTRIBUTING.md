@@ -2,6 +2,8 @@
 
 Pull requests welcome for new datasets, corrected links, updated access status, or new BibTeX entries.
 
+> **Before you contribute:** read [`INCIDENTS.md`](INCIDENTS.md). It documents real failures (28% citation hallucination rate in the initial bib) and the hard rules that came out of them. Most importantly: **never write BibTeX from memory** — always live-resolve DOIs against Crossref.
+
 ## Adding a dataset
 
 1. **Add a row to [`datasets.csv`](datasets.csv)** with all columns filled (use `-` if genuinely unknown — don't leave empty cells, they break CSV parsers). The row is the source of truth.
